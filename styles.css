@@ -1,0 +1,162 @@
+/*Global Styles */
+section, article, aside, footer, header, nav {
+    display: block
+}
+
+/*Reg Styles */
+
+h1, h2, h3, h4 {
+    font-family: 'Lato', calibri, sans-serif;
+    color: #034BA1;
+}
+
+h1 {
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 0;
+    padding: 25px 0;
+    height: 40px;
+    color: #034BA1;
+}
+
+h2, h3 {
+    margin: 20px 0; 
+    clear: left;
+ }
+
+h4 {
+    margin: 12px 0;
+}
+
+li, td, p {
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 0.85em;
+}
+
+p {
+    line-height: 1.25;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: 20px 30px 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #034BA1;
+}
+
+thead {
+    background-color: #E8A1F5AB;
+}
+
+td {
+    border-top: 1px solid #000;
+}
+
+hr {
+    width: 550px;
+    position: relative;
+    float: left;
+}
+
+footer {
+    font-family: 'Lato', calibri, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 0;
+    padding: 30px 0 25px;
+    background-color: #775DF8;
+    color: #034BA1;
+}
+
+header {
+    background-color: #775DF8;
+}
+
+body {
+    background-color: #8C79F3;
+}
+
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+   }
+
+.code {
+    font-family: monospace;  
+    font-weight: 400; 
+    background-color: #ECD0F13A;
+}
+
+.code2 {
+    font-family: monospace;  
+    font-weight: 400; 
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+.cssnote {
+    font-style: italic;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #775DF8;
+}
+
+.stronk {
+    font-weight: 700;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+#css table {
+    width: 800px;
+}
+
+#tables:target:before {
+    content: "";
+    display: block;
+    height: 72px;
+    margin: -72px 0 0;
+}
+
+#semantic:target:before {
+    content: "";
+    display: block;
+    height: 72px;
+    margin: -72px 0 0;
+}
+
+#fonts:target:before {
+    content: "";
+    display: block;
+    height: 72px;
+    margin: -72px 0 0;
+}
+
+#position:target:before {
+    content: "";
+    display: block;
+    height: 72px;
+    margin: -72px 0 0;
+}
+
+#misc:target:before {
+    content: "";
+    display: block;
+    height: 72px;
+    margin: -72px 0 0;
+}

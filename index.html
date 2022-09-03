@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Daggers HTML/CSS Suffering Town</title>
+</head>
+
+<body>
+
+        <!-- Header, Navigation, Link to major Ideas-->
+    <header>
+        <h1>HTML/CSS References</h1>
+    </header>   
+        <!-- References-->
+    <main>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#tables">HTML Tables</a></li>
+                <li><a href="#semantic">Semantic HTML</a></li>
+                <li><a href="#fonts">Custom Fonts</a></li>
+                <li><a href="#position">Positioning and Display</a></li>
+                <li><a href="#misc">Misc CSS</a></li>
+            </ul>
+        </nav>
+        <!-- HTML Notes-->
+        <section id="html">
+            <h2>HTML Notes</h2>
+                <section id="tables">
+                    <h3>Tables</h3>
+                        <table class="htmltab">
+                            <thead>
+                                <tr>
+                                    <th>Tag</th>
+                                    <th>Name</th>
+                                    <th>Use</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;table&gt;</span></th>
+                                    <td class="tcenter">Table</td>
+                                    <td>Creates HTML table</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;thead&gt;</span></th>
+                                    <td class="tcenter">Table Head</td>
+                                    <td>Contains the row of column headers</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;tbody&gt;</span></th>
+                                    <td class="tcenter">Table Body</td>
+                                    <td>Contains all of the other rows of the table</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;th&gt;</span></th>
+                                    <td class="tcenter">Table Heading</td>
+                                    <td>Cell for Headers and first cell in row</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;tr&gt;</span></th>
+                                    <td class="tcenter">Table Row</td>
+                                    <td>Generations a row in the table</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;td&gt;</span></th>
+                                    <td class="tcenter">Table Data</td>
+                                    <td>Creates individual cells of the table. # of TDs determine row length/</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;tfoot&gt;</span></th>
+                                    <td class="tcenter">Table Foot</td>
+                                    <td>Contains footer. Add <span class="code">&lt;tr&gt;</span> to create row</td>
+                                </tr>
+                            </tbody>    
+                            <tfoot>
+                                <tr> 
+                                    <th class="tcenter"><span class="code">coldspan</span></th>
+                                    <td class="tcenter">Column Span</td>
+                                    <td>Defines how many columns a cell takes up. ="#</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">rowspan</span></th>
+                                    <td class="tcenter">Row Span</td>
+                                    <td> Defintes how many rows a cell takes up. ="#</td>
+                                </tr>    
+                            </tfoot>   
+                        </table>
+                        <p>Handle all borders via CSS, rather than depreciated inline</p>
+                </section> <!-- tables end-->
+                <section id="semantic">
+                    <h3>Semantic HTML</h3>
+                        <table class="htmltab">
+                            <thead>
+                                <tr>
+                                    <th>Tag</th>
+                                    <th>Name</th>
+                                    <th>Use</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;header&gt;</span></th>
+                                    <td class="tcenter">Header</td>
+                                    <td>Note: Can exist in article</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;article&gt;</span></th>
+                                    <td class="tcenter">Article</td>
+                                    <td>Independent section, works outside of page context. Page can have multiple (eg blog posts)</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;section&gt;</span></th>
+                                    <td class="tcenter">Section</td>
+                                    <td>Sections off page into related bits, not for layout (use &lt;div&gt;</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;nav&gt;</span></th>
+                                    <td class="tcenter">Navigation</td>
+                                    <td>Note: Can have mult per page, fxn beyond header</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;footer&gt;</span></th>
+                                    <td class="tcenter">Footer</td>
+                                    <td>Note: Can exist within article</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;aside&gt;</span></th>
+                                    <td class="tcenter">Aside</td>
+                                    <td>Contextual break, good for things like quotes, stats, sidebars</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;time&gt;</span></th>
+                                    <td class="tcenter">Time</td>
+                                    <td>Tags parent with metadata, not a head element, but used in SEO</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;address&gt;</span></th>
+                                    <td class="tcenter">Address</td>
+                                    <td>Tags parent with metadata, author contact info</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;figure&gt;</span></th>
+                                    <td class="tcenter">Figure</td>
+                                    <td>Insert figure image into article/body.</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">&lt;figcaption&gt;</span></th>
+                                    <td class="tcenter">Figure Caption</td>
+                                    <td>Caption displayed (typ. below) figure. Brief description/explanation</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr> 
+                                    <th class="tcenter"><span class="code">datetime</span></th>
+                                    <td class="tcenter">Timestamp Attribute</td>
+                                    <td>datetime='ymd xx:xx(24hr)+/-0000(timezone)' time and tz optional</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">alt</span></th>
+                                    <td class="tcenter">Text Alternate</td>
+                                    <td>Text replacement for figure img, not always necessary (can just use <span class="code">&lt;figcaption&gt;</span></td>
+                                </tr>
+                            </tfoot>  
+                        </table>
+                        <h4>Pseudo Semantic</h4>
+                            <p><span class="stronk">Audio:</span>&nbsp;src type='audio/type controls etc.
+                            <br><span class="stronk">Video:</span>&nbsp;src controls Video Not Supported
+                            <br><span class="stronk">Lang:</span>&nbsp;='xx' use in span to indicate text is pronounced differently than rest of page
+                            </p>
+                </section> <!--semantic html end-->
+        </section> <!--html end-->
+        <hr>
+        <section id="css"> <!--css notes-->
+            <h2>CSS Notes</h2>
+                <section id="fonts">
+                    <h3>Custom Fonts</h3>
+                        <p>Link via html head, use <span class="code2">@font-face</span> in css</p>
+                        <ul>
+                            <li>html links pulled from online font source (eg google fonts)</li>
+                            <li>font-face links in css using local path <span class="italic">or</span> latin source info grabbed from font url</li>
+                        </ul>
+                        <h4>Deepest Browser Support</h4> 
+                            <p><span class="code2">@font-face {
+                                <br>&ensp;font-family: 'MyWebFont';
+                                <br>&ensp;src: url('webfont.eot'); <span class="cssnote">/* IE9 Compat Modes */</span>
+                                <br>&ensp;src: url('webfont.eot?#iefix') format('embedded-opentype'), <span class="cssnote">/* IE6-IE8 */</span>
+                                <br>&emsp;&emsp;&nbsp;url('webfont.woff2') format('woff2'), <span class="cssnote">/* Super Modern Browsers */</span>
+                                <br>&emsp;&emsp;&nbsp;url('webfont.woff') format('woff'), <span class="cssnote">/* Pretty Modern Browsers */</span>
+                                <br>&emsp;&emsp;&nbsp;url('webfont.ttf')  format('truetype'), <span class="cssnote">/* Safari, Android, iOS */</span>
+                                <br>&emsp;&emsp;&nbsp;url('webfont.svg#svgFontName') format('svg'); <span class="cssnote">/* Legacy iOS */</span>
+                                <br>}</span>
+                            </p>
+                        <h4>Slightly Deep Broswer Support</h4>   
+                            <p><span class="code2">@font-face {
+                                <br>&ensp;font-family: 'MyWebFont';
+                                <br>&ensp;src: url('webfont.woff2') format('woff2'), <span class="cssnote">/* Super Modern Browsers */</span>
+                                <br>&emsp;&emsp;&nbsp;url('webfont.woff') format('woff'), <span class="cssnote">/* Pretty Modern Browsers */</span>
+                                <br>&emsp;&emsp;&nbsp;url('webfont.ttf')  format('truetype'), <span class="cssnote">/* Safari, Android, iOS */</span>
+                                <br>}</span>
+                            </p>
+                        <h4>Hosted Font linked in CSS</h4>
+                            <p><span class="code2">@import url(//host url);</span></p>    
+                </section> <!--custom fonts end-->     
+                <section id="position">
+                    <h3>Positioning and Display</h3>
+                        <table class="csstab">
+                            <thead>
+                                <tr>
+                                    <th>Property</th>
+                                    <th>Value</th>
+                                    <th>Use</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">position</span></th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>    
+                                    <th></th>
+                                    <td class="tcenter">static</td>
+                                    <td>in place, item won't be moved by css rules</td>
+                                </tr>
+                                <tr>    
+                                    <th></th>
+                                    <td class="tcenter">relative</td>
+                                    <td>positions relative to default position, moveable</td>
+                                </tr>
+                                <tr>    
+                                    <th></th>
+                                    <td class="tcenter">absolute</td>
+                                    <td>remove from flow, placed relative to closest parent element
+                                    </td>
+                                </tr>
+                                <tr>    
+                                    <th></th>
+                                    <td class="tcenter">fixed</td>
+                                    <td>remove from flow, locked in place (can't scroll past)
+                                    </td>
+                                </tr>
+                                <tr>    
+                                    <th></th>
+                                    <td class="tcenter">sticky</td>
+                                    <td>relative in document until specified position is reached then sticks in place</td>
+                                </tr>
+                                <tr>    
+                                    <th class="tcenter"><span class="code">display</span></th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>    
+                                    <th></th>
+                                    <td class="tcenter">inline</td>
+                                    <td>in line with content around them, can't adjust h/w, use for things like h, p, div to make inline</td>
+                                </tr>
+                                <tr>    
+                                    <th></th>
+                                    <td class="tcenter">block</td>
+                                    <td>given own line apart from surrounding content, use for em, strong</td>
+                                </tr>
+                                <tr>    
+                                    <th></th>
+                                    <td class="tcenter">inline-block</td>
+                                    <td>brings elements inline while allowing for height/width manipulation</td>
+                                </tr>
+                                <tr> 
+                                    <th class="tcenter"><span class="code">z-index</span></th>
+                                    <td class="tcenter">#</td>
+                                    <td>element depth on page, places overlapping elements above/blow others, doesn't work on static elements</td>
+                                </tr>
+                                <tr> 
+                                    <th class="tcenter"><span class="code">float</span></th>
+                                    <td class="tcenter">left/right</td>
+                                    <td>moves element as far left/right as possible</td>
+                                </tr>
+                                <tr> 
+                                    <th class="tcenter"><span class="code">clear</span></th>
+                                    <td class="tcenter">l/r/both/none</td>
+                                    <td>changes behavior when inline-block elements bump into each other. Value sets where item can't be touched, operates within containing element</td>
+                                </tr>
+                                <tr> 
+                                    <th class="tcenter"><span class="code">t/b/l/r</span></th>
+                                    <td class="tcenter">#px</td>
+                                    <td>offset #px from selected side</td>
+                                </tr>
+                                <tr> 
+                                    <th class="tcenter"><span class="code">box-sizing</span></th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr> 
+                                    <th></th>
+                                    <td class="tcenter">content-box</td>
+                                    <td>default box model</td>
+                                </tr>
+                                <tr> 
+                                    <th></th>
+                                    <td class="tcenter">border-box</td>
+                                    <td>w/h set box maximums, content auto resized to accommodate borders, padding</td>
+                                </tr>
+                            </tbody>  
+                        </table>
+                </section>
+                <section id="misc">
+                    <h3>Misc CSS</h3>
+                        <p>for semantic html to act like div in legacy browsers use in global css stylesheet
+                        <br><span class="code2">section, article, aside, footer, header, nav {
+                        <br>&emsp;display: block
+                        <br>}</span>
+                        </p>
+                        <p><span class="stronk">CSS Workflow:</span>&nbsp;typography>structure>color/backgrounds</p>
+                </section>
+                <section id="future">
+                    <h3>Future References</h3>
+                    <p>CSS Shorthand
+                    <br>W3C CSS flow standards for font, box, etc.
+                    </p>
+                </section>
+        </section> <!--css end-->
+    </main>
+    <footer>
+        <p>Jackie Daggers says, "Good fuckin luck."</p>
+    </footer>
+</body>
+</html>
